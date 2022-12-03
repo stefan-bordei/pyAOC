@@ -2,7 +2,7 @@ from util import get_puzzle_input_str
 from enum import Enum
 
 
-contents = get_puzzle_input_str('day2')
+contents = get_puzzle_input_str('day2', '\n')
 
 # Mappings
 class SelectionWeight(Enum):
