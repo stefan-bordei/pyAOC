@@ -1,8 +1,9 @@
-from util import get_puzzle_input_str
+from common.util import get_puzzle_input_str, print_results
 from enum import Enum
 
 
-contents = get_puzzle_input_str('day2', '\n')
+CONTENTS = get_puzzle_input_str('day2', '\n')
+
 
 # Mappings
 class SelectionWeight(Enum):
@@ -25,10 +26,11 @@ class DrawMapping(Enum):
     B = 'Y'
     C = 'Z'
 
+
 # Solution Part1
-def part1():
+def part1(data):
     score = 0
-    for game in contents:
+    for game in data:
         score += SelectionWeight[game[0][2]].value
         if WinMatrix[game[0][0]].value == game[0][2]:
             score += 6
@@ -36,10 +38,11 @@ def part1():
             score += 3
     return score
 
+    
 # Solution Part2
-def part2():
+def part2(data):
     score = 0
-    for game in contents:
+    for game in data:
         if game[0][2] == 'X':
             score += SelectionWeight[LooseMatrix[game[0][0]].value].value
         if game[0][2] == 'Y':
@@ -49,8 +52,6 @@ def part2():
     return score
             
 
-
 if __name__ == '__main__':
-    print(f'Part 1: {part1()}')
-    print(f'Part 2: {part2()}')
+    print_results(part1(CONTENTS), part2(CONTENTS))
 

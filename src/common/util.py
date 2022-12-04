@@ -21,3 +21,7 @@ def get_puzzle_input_str(day, separator=None):
 def get_input(day):
     with open(f'./data/{day}.txt', 'r') as scanned_input:
         return [line.rstrip() for line in scanned_input.readlines()]
+
+
+def print_results(part1, part2):
+    print(f'Part 1: {part1}\nPart 2: {part2}')

@@ -1,4 +1,4 @@
-from util import get_input
+from common.util import get_input, print_results
 
 
 PUZZLE_INPUT = [[[int(boundry) for boundry in zone.split('-')] for zone in item.split(',')] for item in get_input('day4')]
@@ -22,6 +22,5 @@ def part2(data):
 
 
 if __name__ == '__main__':
-    print(f'Part 1: {part1(PUZZLE_INPUT)}')
-    print(f'Part 2: {part2(PUZZLE_INPUT)}')
+    print_results(part1(PUZZLE_INPUT), part2(PUZZLE_INPUT))
 

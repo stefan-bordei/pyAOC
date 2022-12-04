@@ -1,4 +1,4 @@
-from util import get_puzzle_input_str
+from common.util import get_puzzle_input_str, print_results
 
 
 BAG_CONTENTS = [bag[0] for bag in get_puzzle_input_str('day3', '\n')]
@@ -33,5 +33,5 @@ def part2(bags):
 
 
 if __name__ == '__main__':
-    print(f'Part 1: {part1(BAG_CONTENTS)}')
-    print(f'Part 2: {part2(BAG_CONTENTS)}')
+    print_results(part1(BAG_CONTENTS), part2(BAG_CONTENTS))
+
