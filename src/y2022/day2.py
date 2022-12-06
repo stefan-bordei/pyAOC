@@ -1,4 +1,4 @@
-from common.util import get_puzzle_input_str, print_results
+from ..common.util import get_puzzle_input_str, print_results
 from enum import Enum
 
 
@@ -52,6 +52,6 @@ def part2(data):
     return score
             
 
-if __name__ == '__main__':
+def solve():
     print_results(part1(CONTENTS), part2(CONTENTS))
 

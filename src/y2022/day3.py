@@ -1,4 +1,4 @@
-from common.util import get_puzzle_input_str, print_results
+from ..common.util import get_puzzle_input_str, print_results
 
 
 BAG_CONTENTS = [bag[0] for bag in get_puzzle_input_str('day3', '\n')]
@@ -8,6 +8,7 @@ def get_char_ord(ch):
     if ch.islower():
         return ord(ch) - 96
     return ord(ch) - 65 + 27
+
 
 def split(s):
     half, rem = divmod(len(s), 2)
@@ -32,6 +33,6 @@ def part2(bags):
     return total
 
 
-if __name__ == '__main__':
+def solve():
     print_results(part1(BAG_CONTENTS), part2(BAG_CONTENTS))
 

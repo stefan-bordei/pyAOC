@@ -1,4 +1,4 @@
-from common.util import get_puzzle_input_str, print_results
+from ..common.util import get_puzzle_input_str, print_results
 import copy
 
 
@@ -68,6 +68,6 @@ def part2(data):
     return ''.join([crates[0] for crates in stack.values()])
 
 
-if __name__ == '__main__':
+def solve():
     print_results(part1(PART1), part2(PART2))
 

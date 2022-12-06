@@ -1,4 +1,4 @@
-from common.util import get_puzzle_input_num, print_results
+from ..common.util import get_puzzle_input_num, print_results
  
 
 CONTENTS = [sum(meals) for meals in get_puzzle_input_num('day1', '\n\n')]
@@ -12,6 +12,6 @@ def part2(data):
     return sum(data[-3:])
 
 
-if __name__ == '__main__':
+def solve():
     print_results(part1(CONTENTS), part2(CONTENTS))
 
