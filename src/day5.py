@@ -1,13 +1,18 @@
 from common.util import get_puzzle_input_str, print_results
 import copy
 
+
 unprocessed_data = get_puzzle_input_str('day5', '\n\n')
 
 
 def get_crate_stacks(crate_data):
-
-    data = [[(item[i], i//4+1) for i, c in enumerate(item) if c.isalpha()] for item in crate_data]
-    flattened = [item for sublist in data for item in sublist]
+    flattened = [
+        item for sublist in [
+            [
+                (item[i], i//4+1) for i, c in enumerate(item) if c.isalpha()
+            ] for item in crate_data
+        ] for item in sublist
+    ]
     
     res = {}
     # Not optimal but my brain hurts....
@@ -36,21 +41,22 @@ PUZZLE_INPUT = dict(
     )
 )
 
+
 PART1 = copy.deepcopy(PUZZLE_INPUT)
 PART2 = copy.deepcopy(PUZZLE_INPUT)
 
+
 def part1(data):
     stack = data.get('crates')
-    print(f'P1: {stack}')
     for move in data.get('operations'):
         for _ in list(range(move.get('move'))):
             stack[move.get('to')].insert(0, stack[move.get('from')][0])
             stack[move.get('from')] = stack[move.get('from')][1:]
     return ''.join([crates[0] for crates in stack.values()])
 
+
 def part2(data):
     stack = data.get('crates')
-    print(f'P2: {stack}')
     for move in data.get('operations'):
         if move.get('move') == 1:
             stack[move.get('to')].insert(0, stack[move.get('from')][0])
