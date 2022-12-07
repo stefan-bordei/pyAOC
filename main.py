@@ -1,6 +1,7 @@
 import argparse, functools
 
-def get_nested_attr(obj, attr, *args):
+
+def rgetattr(obj, attr, *args):
     def _getattr(obj, attr):
         return getattr(obj, attr, *args)
     return functools.reduce(_getattr, [obj] + attr.split('.'))
@@ -14,7 +15,7 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
     
-    mod = __import__(f'src')
-    runner = get_nested_attr(mod, f'y20{args.year}.day{args.day}.solve')
+    mod = __import__(f'src.y20{args.year}.day{args.day}')
+    runner = rgetattr(mod, f'y20{args.year}.day{args.day}.solve')
     runner()
 
