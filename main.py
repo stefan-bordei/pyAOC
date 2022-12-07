@@ -1,20 +1,9 @@
-import argparse
-from src.y2022 import day1, day2, day3, day4, day5, day6
+import argparse, functools
 
-
-DAY_MAP = {
-    "1": day1,
-    "2": day2,
-    "3": day3,
-    "4": day4,
-    "5": day5,
-    "6": day6
-}
-
-
-YEAR_MAP = {
-    "22": DAY_MAP
-}
+def get_nested_attr(obj, attr, *args):
+    def _getattr(obj, attr):
+        return getattr(obj, attr, *args)
+    return functools.reduce(_getattr, [obj] + attr.split('.'))
 
 
 if __name__ == '__main__':
@@ -25,12 +14,7 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
     
-    if not args.day:
-        for k in DAY_MAP.keys():
-            print(f'\n---Year:{args.year} | Day:{k}---')
-            YEAR_MAP[args.year][k].solve()
-    else:
-        print(f'\n---Year:{args.year} | Day:{args.day}---')
-        YEAR_MAP[args.year][args.day].solve()
-
+    mod = __import__(f'src')
+    runner = get_nested_attr(mod, f'y20{args.year}.day{args.day}.solve')
+    runner()
 
