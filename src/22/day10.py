@@ -1,7 +1,7 @@
 from ..common.util import get_puzzle_input_str, print_results
 
 
-CONTENTS = [x for nested in get_puzzle_input_str('day10', '\n') for x in nested]
+CONTENTS = [x for nested in get_puzzle_input_str('22', 'day10', '\n') for x in nested]
 
 
 def print_msg(msg):

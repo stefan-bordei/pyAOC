@@ -1,7 +1,7 @@
 from ..common.util import get_input, print_results
  
 
-CONTENTS = get_input('day7')[1:]
+CONTENTS = get_input('22', 'day07')[1:]
 
 
 class Dir:

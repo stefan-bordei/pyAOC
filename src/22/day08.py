@@ -1,7 +1,7 @@
 from ..common.util import get_puzzle_input_str, print_results
 
 
-CONTENTS =  [[int(a) for a in b] for b in [list(i[0]) for i in get_puzzle_input_str('day8', '\n')]]
+CONTENTS =  [[int(a) for a in b] for b in [list(i[0]) for i in get_puzzle_input_str('22', 'day08', '\n')]]
 
 
 # Soulution Part1

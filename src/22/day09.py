@@ -1,7 +1,7 @@
 from ..common.util import get_puzzle_input_str, print_results
 
 
-CONTENTS = [(x[0], int(x[2:])) for x in get_puzzle_input_str('day9', '\n\n')[0]]
+CONTENTS = [(x[0], int(x[2:])) for x in get_puzzle_input_str('22', 'day09', '\n\n')[0]]
 
 
 # Mappings

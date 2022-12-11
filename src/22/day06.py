@@ -1,7 +1,7 @@
 from ..common.util import get_input, print_results
  
 
-CONTENTS = get_input('day6')[0]
+CONTENTS = get_input('22', 'day06')[0]
 
 
 def find_packet_marker(stream, id_start, id_len):

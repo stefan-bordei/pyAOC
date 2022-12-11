@@ -1,7 +1,7 @@
 from ..common.util import get_puzzle_input_str, print_results
 
 
-BAG_CONTENTS = [bag[0] for bag in get_puzzle_input_str('day3', '\n')]
+BAG_CONTENTS = [bag[0] for bag in get_puzzle_input_str('22', 'day03', '\n')]
 
 
 def get_char_ord(ch):

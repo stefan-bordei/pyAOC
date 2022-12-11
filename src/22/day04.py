@@ -1,7 +1,7 @@
 from ..common.util import get_input, print_results
 
 
-PUZZLE_INPUT = [[[int(boundry) for boundry in zone.split('-')] for zone in item.split(',')] for item in get_input('day4')]
+PUZZLE_INPUT = [[[int(boundry) for boundry in zone.split('-')] for zone in item.split(',')] for item in get_input('22', 'day04')]
 
 
 def part1(data):

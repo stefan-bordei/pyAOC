@@ -2,7 +2,7 @@ from ..common.util import get_puzzle_input_str, print_results
 from enum import Enum
 
 
-CONTENTS = get_puzzle_input_str('day2', '\n')
+CONTENTS = get_puzzle_input_str('22', 'day02', '\n')
 
 
 # Mappings

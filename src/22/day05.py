@@ -2,7 +2,7 @@ from ..common.util import get_puzzle_input_str, print_results
 import copy
 
 
-unprocessed_data = get_puzzle_input_str('day5', '\n\n')
+unprocessed_data = get_puzzle_input_str('22', 'day05', '\n\n')
 
 
 def get_crate_stacks(crate_data):

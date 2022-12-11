@@ -1,7 +1,7 @@
 from ..common.util import get_puzzle_input_num, print_results
- 
 
-CONTENTS = [sum(meals) for meals in get_puzzle_input_num('day1', '\n\n')]
+
+CONTENTS = [sum(meals) for meals in get_puzzle_input_num('22', 'day01', '\n\n')]
 CONTENTS.sort()
         
 def part1(data):

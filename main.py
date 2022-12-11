@@ -15,7 +15,7 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
     
-    mod = __import__(f'src.y20{args.year}.day{args.day}')
-    runner = rgetattr(mod, f'y20{args.year}.day{args.day}.solve')
+    mod = __import__(f'src.{args.year}.day{args.day}')
+    runner = rgetattr(mod, f'{args.year}.day{args.day}.solve')
     runner()
 
