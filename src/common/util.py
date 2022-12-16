@@ -23,5 +23,13 @@ def get_input(year, day):
         return [line.rstrip() for line in scanned_input.readlines()]
 
 
+def sign(x):
+    if x < 0:
+        return -1
+    elif x > 0: 
+        return 1
+    return 0
+
+
 def print_results(part1, part2):
     print(f'Part 1: {part1}\nPart 2: {part2}')
